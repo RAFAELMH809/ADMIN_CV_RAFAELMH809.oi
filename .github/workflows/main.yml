@@ -36,27 +36,27 @@ jobs:
             
       - name: download and run httpd docker imagen
         run:  |
-            docker run -d --name http_base httpd
+            docker run -d --name admin-cv-t httpd
       
       - name: docker ps
         run:  |
             docker ps
       
       - name: Remove old files
-        run: docker exec http_base rm -rf /usr/local/apache2/htdocs/*
+        run: docker exec admin-cv-t rm -rf /usr/local/apache2/htdocs/*
 
       
       - name: cp Angular build to containers
         run:  |
-              docker cp dist/admin-cv/browser/.  http_base:/usr/local/apache2/htdocs
+              docker cp dist/admin-cv/browser/.  admin-cv-t:/usr/local/apache2/htdocs
       - name: show conteiner
         run: |
-               docker exec http_base ls -la /usr/local/apache2/htdocs
+               docker exec admin-cv-t ls -la /usr/local/apache2/htdocs
               
               
       - name: docker custom image
         run:  |
-              docker commit --change "ENV MODEL_NAME ${{secrets.MODEL_NAME}}" http_base ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:${{github.sha}}
+              docker commit --change "ENV MODEL_NAME_T ${{secrets.MODEL_NAME-T}}" admin-cv-t ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:${{github.sha}}
      
       - name: docker images
         run: docker images
