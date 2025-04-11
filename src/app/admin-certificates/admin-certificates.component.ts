@@ -1,3 +1,4 @@
+// c
 import { Component } from '@angular/core';
 import { CertificatesService } from '../services/certificates-service/certificates.service';
 import { Certificates} from '../models/certificates/certificates.model';

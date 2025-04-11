@@ -1,3 +1,4 @@
+// c
 import { Component } from '@angular/core';
 import { EducationService } from '../services/education-service/education.service';
 import { Education } from '../models/education/education.model';
