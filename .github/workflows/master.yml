@@ -56,7 +56,7 @@ jobs:
               
       - name: docker custom image
         run:  |
-              docker commit --change "ENV MODEL_NAME ${{secrets.MODEL_NAME}}" http_base ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:${{github.sha}}
+              docker commit --change "ENV MODEL_NAME ${{secrets.MODEL_NAME}}" admin-cv ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:${{github.sha}}
      
       - name: docker images
         run: docker images
