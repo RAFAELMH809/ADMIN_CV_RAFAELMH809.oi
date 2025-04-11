@@ -1,1 +1,26 @@
-<p>admin-certificates works!</p>
+<div class="container color-dark">
+  <div class="col">
+    <p>certificates items</p>
+  </div>
+</div>
+
+<div class="container color-ligth">
+  <div class="col">
+    <form>
+     
+      <input type="text" class="txt" name="certificacion" placeholder="Certification Name" [(ngModel)]="myCertificates.certificacion"><br>
+      <input type="text" class="txt" name="institucion" placeholder="Institution" [(ngModel)]="myCertificates.institucion"><br>
+    
+      <input type="submit" class="btn add" value="{{ btntxt }}" (click)="confirmAdd()">
+    </form>
+  </div>
+
+  <div class="col">
+    <p class="life-container" *ngFor="let job of certificates;">
+      <input type="submit" class="btn delete" value="delete" (click)="confirmDelete(job.id)">
+       <input type="submit" class="btn edit" value="edit" (click)="confirmEdit(job)">
+      {{job.certificacion}} - {{job.institucion}}
+    </p>
+  </div>
+</div>
+
