@@ -1,3 +1,4 @@
+//c 
 import { Component } from '@angular/core';
 import { LanguagesService } from '../services/languages-service/languages.service';
 import { Languages } from '../models/languages/languages.model';

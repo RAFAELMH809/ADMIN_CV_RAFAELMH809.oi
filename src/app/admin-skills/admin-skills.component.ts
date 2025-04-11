@@ -1,3 +1,4 @@
+//c
 import { Component } from '@angular/core';
 import { SkillsService } from '../services/skills-service/skills.service';
 import { Skills } from '../models/skills/skills.model';

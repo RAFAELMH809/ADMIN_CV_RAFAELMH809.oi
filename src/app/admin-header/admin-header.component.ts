@@ -1,3 +1,4 @@
+// c
 import { Component } from '@angular/core';
 import { HeaderService } from '../services/header-service/header.service';
 import { Header } from '../models/header/header.model';

@@ -1,3 +1,4 @@
+// c
 import { Component } from '@angular/core';
 import { InterestsService } from '../services/interests-service/interests.service';
 import { Interests } from '../models/interests/interests.model';
