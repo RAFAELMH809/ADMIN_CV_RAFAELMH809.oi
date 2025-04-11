@@ -1,1 +1,31 @@
-<p>admin-header works!</p>
+<div class="container color-dark">
+  <div class="col">
+    <p>header items</p>
+  </div>
+</div>
+
+<div class="container color-ligth">
+  <div class="col">
+    <form>
+     
+      <input type="text" class="txt" name="name" placeholder="Name" [(ngModel)]="myHeader.name"><br>
+      <input type="text" class="txt" name="goalLife" placeholder="Goal" [(ngModel)]="myHeader.goalLife"><br>
+      <input type="text" class="txt" name="photoUrl" placeholder="Photo URL" [(ngModel)]="myHeader.photoUrl"><br>
+      <input type="email" class="txt" name="email" placeholder="Email" [(ngModel)]="myHeader.email"><br>
+      <input type="text" class="txt" name="phoneNumber" placeholder="Phone Number" [(ngModel)]="myHeader.phoneNumber"><br>
+      <input type="text" class="txt" name="location" placeholder="Location" [(ngModel)]="myHeader.location"><br>
+      <input type="text" class="txt" name="socialNetwork" placeholder="Social Network" [(ngModel)]="myHeader.socialNetwork"><br>
+      
+      <input type="submit" class="btn add" value="{{ btntxt }}" (click)="confirmAdd()">
+    </form>
+  </div>
+
+  <div class="col">
+    <p class="life-container" *ngFor="let job of header;">
+      <input type="submit" class="btn delete" value="delete" (click)="confirmDelete(job.id)">
+       <input type="submit" class="btn edit" value="edit" (click)="confirmEdit(job)">
+      {{job.name}} - {{job.goalLife}}
+    </p>
+  </div>
+</div>
+

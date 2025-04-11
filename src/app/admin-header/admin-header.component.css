@@ -1,0 +1,73 @@
+/*Boton de agregar y actulizar*/
+button.add,
+input.add {
+  background-color: green; /*color al dar click boton*/
+  color: white; /* color de las letras del boton*/
+}
+
+button.add:hover,
+input.add:hover {
+  background-color: green;/*colo del boton*/
+  transform: scale(1.05);
+}
+
+/* Botón Editar */
+button.edit,
+input.edit {
+  background-color:blue; /*color al dar click*/
+  color: white;   /*color de las letras del boton*/
+}
+
+button.edit:hover,
+input.edit:hover {
+  background-color: blue; /*color del boton*/
+  transform: scale(1.05);
+}
+/* Botón Eliminar */
+button.delete,
+input.delete {
+  background-color: red;  /*color al dar click*/
+  color: white;  /* color de las letras del boton*/
+}
+
+button.delete:hover,
+input.delete:hover {
+  background-color: red; /*color del boton*/
+  transform: s
+}
+/* Mejorar los inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 50%;  /* Tamaño de la celda al agregar campos*/
+  padding: 6px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;  /* Bordes redondeados */
+  font-size: 0.9rem; 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de foco en los inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: rebeccapurple;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de los botones */
+button,
+input[type="submit"] {
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 25px;  /* Bordes redondeados */
+  font-size: 1rem; 
+  cursor: pointer;
+  border: none;
+  width: 10%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+  
