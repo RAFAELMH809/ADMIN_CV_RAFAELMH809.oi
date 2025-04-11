@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
 
 body {
-  background: #2E9CE6;
+  background: rebeccapurple;    /* cambio de fonfo general red,blue,white,*/
   padding: 3em;
   font-family: 'Raleway', 'Arial';
-  color: #fff;
+  color: white;    /*color de las letras general*/
 }
 
 ul {
@@ -24,6 +24,19 @@ ul li a {
 }
 
 a {
-  color: #fff;
+  color: white;  /*color de las letras de los componente header, componentes, etc*/
   text-decoration: none;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.app-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
 }
