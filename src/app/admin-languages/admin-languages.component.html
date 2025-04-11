@@ -1,1 +1,28 @@
-<p>admin-languages works!</p>
+<div class="container color-dark">
+  <div class="col">
+    <p>languages items</p>
+  </div>
+</div>
+
+<div class="container color-ligth">
+  <div class="col">
+    <form>
+   
+      <input type="text" class="txt" name="idiomas" placeholder="Idiomas" [(ngModel)]="myLanguage.idiomas"><br>
+      
+      <input type="text" class="txt" name="nivel" placeholder="Nivel %" [(ngModel)]="myLanguage.nivel"><br>
+      
+      <input type="submit" class="btn add" value="{{ btntxt }}" (click)="confirmAdd()">
+    </form>
+  </div>
+
+  <div class="col">
+    <p class="life-container" *ngFor="let job of languages;">
+    
+      <input type="submit" class="btn delete" value="delete" (click)="confirmDelete(job.id)">
+       <input type="submit" class="btn edit" value="edit" (click)="confirmEdit(job)">
+      {{job.idiomas}} - {{job.nivel}}
+    </p>
+  </div>
+</div>
+
